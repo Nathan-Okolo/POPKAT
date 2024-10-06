@@ -5569,6 +5569,86 @@
 </head>
 
 <body>
+
+
+    <style>
+        /* Styles for the overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Semi-transparent black background */
+            z-index: 9999;
+            /* Ensure it appears on top of other content */
+        }
+
+        /* Styles for the close button */
+        .close-button {
+            position: absolute;
+            top: 100px;
+            right: 20px;
+            cursor: pointer;
+            color: white;
+            font-size: 50px;
+        }
+
+        /* Style for the advert image */
+        .advert-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            max-height: 80%;
+        }
+
+        @media (max-width: 768px) {
+            .close-button {
+                top: 90px;
+                /* Adjust top position for smaller screens */
+                right: 10px;
+                /* Adjust right position for smaller screens */
+                font-size: 30px;
+                /* Adjust font size for smaller screens */
+            }
+        }
+    </style>
+
+    <div id="spinner"
+     class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay">
+    <!-- Close button -->
+    <div class="close-button" id="close-button">×</div>
+
+    <!-- Advert video -->
+    <a href="">
+        <video width="100%" height="100%" autoplay loop muted class="advert-video">
+            <source src="/images//lift.mp4" type="video/mp4">
+        </video>
+    </a>
+</div>
+
+<script>
+    window.onload = function () {
+        document.getElementById('overlay').style.display = 'block';
+    };
+
+    // JavaScript to close the overlay when the close button is clicked
+    document.getElementById('close-button').addEventListener('click', function () {
+        document.getElementById('overlay').style.display = 'none';
+    });
+</script>
+
     <div id="root"><a id="page-1" aria-hidden="true" style="visibility:hidden;"></a>
         <section id="SeYoVWDfAJFYOQmV"
             style="position:relative;overflow:hidden;display:grid;align-items:center;grid-template-columns:auto 100rem auto;z-index:0;">
@@ -5680,8 +5760,8 @@
                                 <div class="animated"
                                     style="width:100%;height:100%;animation:pop-RIGHT-ed045b36-a69b-4f1e-8bfa-28aa923ef2d7 500ms 100ms both paused;">
                                     <a id="l52MWMw7kKADfoCJ" target="_blank" rel="noopener"
-                                        href="https://x.com/POPKATKASPA?t=8PRMfyAhDXGAiXWXg7OLIQ&s=09" style="pointer-events:all;"
-                                        data-interstitial-link="">
+                                        href="https://x.com/POPKATKASPA?t=8PRMfyAhDXGAiXWXg7OLIQ&s=09"
+                                        style="pointer-events:all;" data-interstitial-link="">
                                         <div id="uq7IAzTHbpSTrnbg" style="width:100%;height:100%;opacity:1.0;">
                                             <div id="NukCiGteaX7IUVYg"
                                                 style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
@@ -6126,18 +6206,18 @@
                                         sizes="(max-width: 375px) 100vw, (min-width: 375.05px) and (max-width: 480px) 100vw, (min-width: 480.05px) and (max-width: 768px) 100vw, (min-width: 768.05px) and (max-width: 1024px) 100vw, (min-width: 1024.05px) 100vw"
                                         style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 57.06442167%;transform:translate(-50%, -57.06442167%) rotate(0deg);">
 
-                                        <button id="click_to_buy" type="button" class="btn btn-outline-success btn-lg"
-                    style="font-family:YACgEcnJpjs-0; "
-                    onclick="window.location.href='https://t.me/kspr_home_bot'">Click
-                    Here to Buy Now</button>
+                                    <button id="click_to_buy" type="button" class="btn btn-outline-success btn-lg"
+                                        style="font-family:YACgEcnJpjs-0; "
+                                        onclick="window.location.href='https://t.me/kspr_home_bot'">Click
+                                        Here to Buy Now</button>
                                 </div>
-                                
+
                             </div>
-                            
+
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
             </div>
             <div style="display:grid;position:relative;grid-area:1 / 2 / 2 / 3;">
@@ -6196,7 +6276,8 @@
                                                             d="M46.54545418,0 L978.3255175,0 C990.67013947,0 1002.50915787,4.90388198 1011.23812378,13.6328479 1019.96708969,22.36181381 1024.87097168,34.2008322 1024.87097168,46.54545418 L1024.87097168,1076.64802726 C1024.87097168,1088.99264924 1019.9670897,1100.83166764 1011.23812379,1109.56063355 1002.50915788,1118.28959946 990.67013948,1123.19348145 978.3255175,1123.19348145 L46.54545418,1123.19348145 C34.20083221,1123.19348145 22.36181381,1118.28959946 13.63284789,1109.56063355 4.90388198,1100.83166764 0,1088.99264924 0,1076.64802726 L0,46.54545418 C0,34.20083221 4.90388198,22.36181381 13.6328479,13.6328479 22.36181381,4.90388199 34.2008322,0 46.54545418,0 Z"
                                                             style="fill:#040404;opacity:100.0;"></path>
                                                     </g>
-                                                </svg></div>
+                                                </svg>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -6226,7 +6307,9 @@
                                                 style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
                                                 <p id="nu8u6ycxgaZ9OUp6"
                                                     style="color:#fcfcfb;font-family:YACgEcnJpjs-0;line-height:1.3775137em;text-align:center; margin-top: 20px;">
-                                                    <span id="Hcb2szxY40FlWBuZ" style="color:#fcfcfb;">99% of the tokens are freely minted, and 1% for the kasmunity development.</span></p>
+                                                    <span id="Hcb2szxY40FlWBuZ" style="color:#fcfcfb;">99% of the tokens
+                                                        are freely minted, and 1% for the kasmunity development.</span>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -6242,7 +6325,8 @@
                             style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
                             <p id="WsifYDPR7YQgeQ1r"
                                 style="color:#000000;font-family:YACgEcnJpjs-0;line-height:1.37898423em;text-align:center;">
-                                <span id="od2A8y8ZsTOThJRA" style="color:#000000;"></span><br></p>
+                                <span id="od2A8y8ZsTOThJRA" style="color:#000000;"></span><br>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -6259,7 +6343,8 @@
                                         style="stroke-linejoin:round;stroke-linecap:round;stroke-width:4px;fill:inherit;">
                                     </path>
                                 </g>
-                            </svg></div>
+                            </svg>
+                        </div>
                     </div>
                 </div>
                 <div id="Qebi3pZQ82l0GmZe" style="z-index:1;">
@@ -6274,7 +6359,6 @@
                                             <div id="jbP0ArDBXecYEOPD"
                                                 style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
                                                 <img src="images/chat.jpg" loading="lazy"
-                                                   
                                                     sizes="(max-width: 375px) 31.85094606vw, (min-width: 375.05px) and (max-width: 480px) 31.85094606vw, (min-width: 480.05px) and (max-width: 768px) 31.85094606vw, (min-width: 768.05px) and (max-width: 1024px) 31.85094606vw, (min-width: 1024.05px) 31.85094606vw"
                                                     style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
                                             </div>
@@ -6288,7 +6372,7 @@
 
             </div>
 
-            
+
 
 
 
@@ -6372,8 +6456,8 @@
                                             style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;border-radius:4.9551259%/6.9239036%;">
                                             <div id="izzyHl7Kc0hwqC6U"
                                                 style="width:100%;height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
-                                                <video src="images/video.mp4" playsinline="" preload="none" autoplay="" loop
-                                                    muted="" controls=""
+                                                <video src="images/video.mp4" playsinline="" preload="none" autoplay=""
+                                                    loop muted="" controls=""
                                                     style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);"></video>
                                             </div><svg id="kKMMdJgYBNNTerfq"
                                                 viewBox="0 0 585.2525365951476 418.83887602975426"
@@ -6414,8 +6498,8 @@
                                             style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;border-radius:4.9551259%/4.9551259%;">
                                             <div id="YgCmTzM8kN0fcsKZ"
                                                 style="width:100%;height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;">
-                                                <video src="images/catvid.mp4" playsinline="" preload="none" autoplay="" loop
-                                                    muted="" controls=""
+                                                <video src="images/catvid.mp4" playsinline="" preload="none" autoplay=""
+                                                    loop muted="" controls=""
                                                     style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);"></video>
                                             </div><svg id="CgL6VN296tnE2ljo"
                                                 viewBox="0 0 585.2525365951475 585.2525365951475"
