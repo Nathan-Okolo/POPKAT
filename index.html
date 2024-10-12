@@ -14,6 +14,31 @@
     <link rel="icon" href="/images/logo.png" type="image/png" sizes="32x32">
     <link rel="apple-touch-icon" href="/images/logo.png" sizes="180x180">
     <style>
+        /* Override the default warning button color */
+        .btn-warning {
+            background-color: orange;
+            border-color: orange;
+        }
+
+        /* Change the text color for better contrast */
+        .btn-warning:hover,
+        .btn-warning:focus,
+        .btn-warning:active,
+        .btn-warning.active,
+        .open>.dropdown-toggle.btn-warning {
+            background-color: #e69500;
+            /* Darker shade of orange for hover and active states */
+            border-color: #e69500;
+            color: white;
+            /* Ensure text remains readable */
+        }
+
+        /* Optional: focus state */
+        .btn-warning:focus {
+            box-shadow: 0 0 0 0.2rem rgba(255, 165, 0, 0.5);
+            /* Adjust shadow color */
+        }
+
         :root {
             --ffsd: 0px;
             --1vw: calc((100vw - var(--sbw, 0px)) / 100);
@@ -6038,7 +6063,7 @@
                     </div>
                     <div style="display:grid;position:relative;">
                         <button id="download-btn" type="button" class="btn btn-warning btn-lg"
-                            style="font-family:YACgEcnJpjs-0; color: white; "
+                            style="font-family:YACgEcnJpjs-0; color: white;"
                             onclick="downloadImage('/images/cap.png')">Get your Cap
                         </button>
                     </div>
