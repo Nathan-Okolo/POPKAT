@@ -1995,9 +1995,9 @@ nav a:hover {
 .callto-wrap,
 .single-project .content .content-overlay,
 .single-vol .content .content-overlay {
-    background-image: -moz-linear-gradient(0deg, #f40f68 0%, #f86e3d 55%, #fbcd11 100%);
-    background-image: -webkit-linear-gradient(0deg, #f40f68 0%, #f86e3d 55%, #fbcd11 100%);
-    background-image: -ms-linear-gradient(0deg, #f40f68 0%, #f86e3d 55%, #fbcd11 100%)
+    background-image: -moz-linear-gradient(0deg, #17f40f 0%, #3d78f8 55%, #fbcd11 100%);
+    background-image: -webkit-linear-gradient(0deg, #17f40f 0%, #3d78f8 55%, #fbcd11 100%);
+    background-image: -ms-linear-gradient(0deg, #17f40f 0%, #3d78f8 55%, #fbcd11 100%)
 }
 
 .p2-gradient-bg {
