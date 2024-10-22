@@ -2231,7 +2231,7 @@ nav a:hover {
 }
 
 .project-area {
-    background-color: #f9f9ff
+    background: url(/images/catbg2.png) no-repeat center center/cover
 }
 
 .project-area .header-text {
@@ -2525,7 +2525,7 @@ nav a:hover {
 }
 
 .donate-area {
-    background: url(../img/header-bg.jpg) no-repeat center center fixed;
+    background: url(/images//bg1.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

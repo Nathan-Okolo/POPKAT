@@ -1,159 +1,200 @@
-	<!DOCTYPE html>
-	<html lang="zxx" class="no-js">
-	<head>
-		<!-- Mobile Specific Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- Favicon-->
-		<link rel="shortcut icon" href="img/fav.png">
-		<!-- Author Meta -->
-		<meta name="author" content="Colorlib">
-		<!-- Meta Description -->
-		<meta name="description" content="">
-		<!-- Meta Keyword -->
-		<meta name="keywords" content="">
-		<!-- meta character set -->
-		<meta charset="UTF-8">
-		<!-- Site Title -->
-		<title>Charity</title>
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
 
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-			<!--
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="Colorlib">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Charity</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+	<!--
 			CSS
 			============================================= -->
-			<link rel="stylesheet" href="css/linearicons.css">=
-			<link rel="stylesheet" href="css/font-awesome.min.css">
-			<link rel="stylesheet" href="css/magnific-popup.css">
-			<link rel="stylesheet" href="css/nice-select.css">
-			<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-			<link rel="stylesheet" href="css/bootstrap.css">
-			<link rel="stylesheet" href="css/main.css">
-		</head>
-		<body>
+	<link rel="stylesheet" href="css/linearicons.css">=
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
 
-			<!-- Start Header Area -->
-			<header class="default-header">
-				<div class="container">
-					<div class="header-wrap">
-						<div class="header-top d-flex justify-content-between align-items-center">
-							<div class="logo">
-								<a href="#home"><img src="/images/logo.png" alt="" width="10%" height="10%"></a>
-							</div>
-						</div>
+<body>
+
+	<!-- Start Header Area -->
+	<header class="default-header">
+		<div class="container">
+			<div class="header-wrap">
+				<div class="header-top d-flex justify-content-between align-items-center">
+					<div class="logo">
+						<a href="#home"><img src="/images/logo.png" alt="" width="10%" height="10%"></a>
 					</div>
 				</div>
-			</header>
-			<!-- End Header Area -->
+			</div>
+		</div>
+	</header>
+	<!-- End Header Area -->
 
-			<!-- start banner Area -->
-			<section class="banner-area relative" id="home">
-				<div class="overlay overlay-bg"></div>
-				<div class="container">
-						<div class="row fullscreen align-items-center justify-content-start" style="height: 915px;">
-							<div class="banner-content col-lg-9 col-md-12">
-								<h1>
-									Your Donation <br>
-									is an Inspiration to Us
-								</h1>
-								<a href="#donate" class="head-btn btn text-uppercase">Donate to Popkat</a>
-							</div>
-						</div>
+	<!-- start banner Area -->
+	<section class="banner-area relative" id="home">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row fullscreen align-items-center justify-content-start" style="height: 915px;">
+				<div class="banner-content col-lg-9 col-md-12">
+					<h1>
+						Your Donation <br>
+						is an Inspiration to Us
+					</h1>
+					<a href="#donate" class="head-btn btn text-uppercase">Donate to Popkat</a>
 				</div>
-			</section>
-			<!-- End banner Area -->
+			</div>
+		</div>
+	</section>
+	<!-- End banner Area -->
 
-			<!-- Start callto Area -->
-				<section class="callto-area relative">
-					<div class="container">
-						<div class="row d-flex callto-wrap justify-content-between pt-40 pb-40">
-							<h3 class="text-white">Thank you for your support! Every contribution helps us build a better Popkat.</h3>
-							<a href="#" class="head-btn head-btn2 btn text-uppercase">Donate Now</a>
+	<script>
+		// Get the copy button and wallet address elements
+		const copyButton = document.getElementById('copyButton');
+		const walletAddressElement = document.getElementById('walletAddress');
+
+		// Add event listener to the copy button
+		copyButton.addEventListener('click', function (event) {
+			event.preventDefault(); // Prevent the default anchor click behavior
+
+			// Get the wallet address text
+			const walletAddress = walletAddressElement.innerText.replace('Wallet Address: ', '');
+
+			// Copy the wallet address to the clipboard
+			navigator.clipboard.writeText(walletAddress).then(function () {
+				// Change the button text to 'Copied'
+				copyButton.innerText = 'Copied';
+
+				// Optionally, you can reset the text back after a few seconds
+				setTimeout(() => {
+					copyButton.innerText = 'click to copy address';
+				}, 2000); // Change back after 2 seconds
+			}, function (err) {
+				console.error('Could not copy text: ', err);
+			});
+		});
+	</script>
+
+	<!-- Start project Area -->
+	<section class="project-area section-gap" id="project">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-8 pb-80 header-text">
+					<h1 style="color: #2ece25; font-size: 60px;">Donate to Popkat</h1>
+					<p style="color: white; font-size: 30px; font-weight:600; line-height: 1.3824731em;">
+						Your support helps us grow and continue developing exciting features for the Popkat community.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-4 project-wrap">
+					<div class="single-project">
+						<div class="content">
+							<a href="#" target="_blank">
+								<div class=""></div>
+								<img class="content-image img-fluid d-block mx-auto item1" src="/images/1.jpg" alt="">
+								<div class="content-details fadeIn-bottom">
+									<a href="#" class="head-btn btn text-uppercase">Donate Now</a>
+								</div>
+							</a>
 						</div>
 					</div>
-				</section>
-			<!-- End callto Area -->
-
-
-			<!-- Start project Area -->
-			<section class="project-area section-gap" id="project">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="col-md-8 pb-80 header-text">
-							<h1>Donate to Popkat</h1>
-							<p>
-								Your support helps us grow and continue developing exciting features for the Popkat community.
-							</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-4 col-md-4 project-wrap">
-							<div class="single-project">
-								<div class="content">
-								    <a href="#" target="_blank">
-								      <div class="content-overlay"></div>
-								  		 <img class="content-image img-fluid d-block mx-auto" src="/images/1.jpg" alt="">
-								      	<div class="content-details fadeIn-bottom">
-								      		<a href="#" class="head-btn btn text-uppercase">Donate Now</a>
-								      	</div>
-								    </a>
-								 </div>
-							</div>
-							<div class="details">
-								<a href="#"><h2>Easy Flight Search</h2></a>
-						  		<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.</p>
-							</div>
-
-						</div>
-						<div class="col-lg-4 col-md-4 project-wrap">
-							<div class="single-project">
-								<div class="content">
-								    <a href="#" target="_blank">
-								      <div class="content-overlay"></div>
-								  		 <img class="content-image img-fluid d-block mx-auto" src="/images/2.jpg" alt="">
-								      	<div class="content-details fadeIn-bottom">
-								      		<a href="#" class="head-btn btn text-uppercase">Donate Now</a>
-								      	</div>
-								    </a>
-								 </div>
-							</div>
-							<div class="details">
-								<a href="#"><h2>Easy Flight Search</h2></a>
-						  		<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 project-wrap">
-							<div class="single-project">
-								<div class="content">
-								    <a href="#" target="_blank">
-								      <div class="content-overlay"></div>
-								  		 <img class="content-image img-fluid d-block mx-auto" src="/images/3.jpg" alt="">
-								      	<div class="content-details fadeIn-bottom">
-								      		<a href="#" class="head-btn btn text-uppercase">Donate Now</a>
-								      	</div>
-								    </a>
-								 </div>
-							</div>
-							<div class="details">
-								<a href="#"><h2>Easy Flight Search</h2></a>
-						  		<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.</p>
-							</div>
-						</div>
-
+					<div class="details">
 					</div>
 				</div>
-			</section>
-			<!-- End project Area -->
+				<div class="col-lg-4 col-md-4 project-wrap">
+					<div class="single-project">
+						<div class="content">
+							<a href="#" target="_blank">
+								<div class=""></div>
+								<img class="content-image img-fluid d-block mx-auto item2" src="/images/2.jpg" alt="">
+								<div class="content-details fadeIn-bottom">
+									<a href="#" class="head-btn btn text-uppercase">Donate Now</a>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="details">
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 project-wrap">
+					<div class="single-project">
+						<div class="content">
+							<a href="#" target="_blank">
+								<div class=""></div>
+								<img class="content-image img-fluid d-block mx-auto item3" src="/images/3.jpg" alt="">
+								<div class="content-details fadeIn-bottom">
+									<a href="#" class="head-btn btn text-uppercase">Donate Now</a>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="details">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Start callto Area -->
+	<section class="callto-area relative">
+		<div class="container">
+			<div class="row d-flex callto-wrap justify-content-between pt-40 pb-40">
+				<h3 class="text-white" id="walletAddress">Wallet Address:
+					kaspa:qr5zt8d7d2dnu8tdedy4mjr2r3lxcc6789g75sqtpza7qf5hh50fslt6mm979</h3><br>
+				<a href="" class="head-btn head-btn2 btn text-uppercase" id="copyButton">click to copy address</a>
+			</div>
+		</div>
+	</section>
+	<!-- End callto Area -->
+	<script>
+		const images = ['/images/1.jpg', '/images/3.jpg', '/images/4.jpg', '/images/5.jpg', '/images/6.jpg'];
+
+		function changeImage(imgElement) {
+			const randomIndex = Math.floor(Math.random() * images.length);
+			imgElement.src = images[randomIndex];
+		}
+
+		function startImageRotation() {
+			const imageElements = document.querySelectorAll('.content-image');
+			imageElements.forEach((imgElement) => {
+				setInterval(() => changeImage(imgElement), 1000); // Change image every 5 seconds
+			});
+		}
+
+		// Start the image rotation
+		startImageRotation();
+	</script>
+	<!-- End project Area -->
 
 
 
-			<script src="js/vendor/jquery-2.2.4.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-			<script src="js/vendor/bootstrap.min.js"></script>
-			<script src="js/jquery.ajaxchimp.min.js"></script>
-			<script src="js/jquery.nice-select.min.js"></script>
-			<script src="js/jquery.sticky.js"></script>
-			<script src="js/parallax.min.js"></script>
-			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-			<script src="js/jquery.magnific-popup.min.js"></script>
-			<script src="js/main.js"></script>
-		</body>
-	</html>
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+		integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+		crossorigin="anonymous"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/parallax.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
